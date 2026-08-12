@@ -1,2 +1,138 @@
-/* YouTube Music Evolved — global styles */
-/* The app loads music.youtube.com directly; this file is reserved for future UI overlays. */
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d0d0d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+#titlebar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 6px 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  background: #0d0d0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  user-select: none;
+}
+
+.branding,
+.drag-space {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.branding {
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.drag-space {
+  flex: 1;
+}
+
+.logo {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+}
+
+.controls {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1px;
+  height: 100%;
+}
+
+.control-separator {
+  width: 1px;
+  height: 14px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.window-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.58);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  transition: color 120ms ease, background 120ms ease;
+}
+
+.window-button:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.window-button svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.close-button:hover {
+  color: white;
+  background: #c42b1c;
+}
+
+#webview-status {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  text-align: center;
+  pointer-events: none;
+}
+
+#webview-status.error {
+  color: #ff8d84;
+}

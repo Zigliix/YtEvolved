@@ -5,7 +5,8 @@ A lightweight YouTube Music desktop client built with [Tauri v2](https://tauri.a
 ## What it does
 
 - Opens **music.youtube.com** in a native desktop window
-- Dynamically updates the window title with the currently playing song and artist
+- Uses a local custom title bar with native window controls
+- Renders YouTube Music in a dedicated child WebView
 - Uses a Chrome user-agent for full YouTube Music compatibility
 
 ## Stack
