@@ -1,7 +1,28 @@
-# Tauri + Vanilla TS
+# YouTube Music Evolved
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript.
+A lightweight YouTube Music desktop client built with [Tauri v2](https://tauri.app/).
 
-## Recommended IDE Setup
+## What it does
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- Opens **music.youtube.com** in a native desktop window
+- Dynamically updates the window title with the currently playing song and artist
+- Uses a Chrome user-agent for full YouTube Music compatibility
+
+## Stack
+
+- **Tauri v2** — Rust backend + native webview
+- **Vite + TypeScript** — frontend tooling
+- **Rust** — window management & IPC commands
+
+## Development
+
+```bash
+npm install
+npm run tauri dev
+```
+
+## Build
+
+```bash
+npm run tauri build
+```
